@@ -1,0 +1,29 @@
+
+		There can only be one
+story:
+what if the idea is that, adventurers(players), are trying to become the "chosen one", and 
+they cooporate together to try and reach that, needing to face different enemies,
+where at the end, there can only be one
+"chosen one", and that's why they have to battle for it. (not sure yet.ref 3rd idea for coop aspect)
+
+game design:
+whole basis is it's a rogue like game like vampire survivors/swarm(league of legends)/hades
+game should take place in a 2.5D space, there should be different classes with different 
+abilities. 
+
+1. what if players start with melee combat no weapons their classes are defined by weapons
+similar to Albion. (Rob's idea) 
+
+
+
+coop aspect:
+1. players can do synergy combos with their abilities(their abilities fuse/empower together or
+something in that spectre).
+2. add mini games (totally skill based / fun etc..), for a chance any of the players to get 
+a boost/enchantment/powerup
+, there would be pillars in the world that indicate it's a minigame area.
+similar to swarm(league of legends), but rather the players would compete against each other.
+
+3. Maybe at the end of the run/floor, 
+make it so the final hurdle is actually each and one of you,
+so the players have to fight each other to be the victor.
