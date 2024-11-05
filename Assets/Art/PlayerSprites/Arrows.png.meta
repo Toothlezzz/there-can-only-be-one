@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26a57908435de0448b970006821324c2
+guid: 935401e4ec80e9c4d972d3c35bed5a8e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,127 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 1_0
+      name: Arrows_10
       rect:
         serializedVersion: 2
-        x: 10
-        y: 8
-        width: 17
-        height: 24
+        x: 27
+        y: 20
+        width: 14
+        height: 3
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22653aad680d6c64485a3ec28186102e
-      internalID: -1330981648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1_1
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 7
-        width: 16
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 559b084d816f50c40baf19a1ec67c848
-      internalID: 1605751823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1_2
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 7
-        width: 15
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40fd7e56dd0069242b0dbbf6ec5689f8
-      internalID: -664147467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1_4
-      rect:
-        serializedVersion: 2
-        x: 179
-        y: 9
-        width: 18
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936fc53a32bd13d4586d42da699a516c
-      internalID: 1975144857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1_5
-      rect:
-        serializedVersion: 2
-        x: 220
-        y: 8
-        width: 17
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27daad57fb7b3d64487542491fdf2ee3
-      internalID: 1962195456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 1_6
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 7
-        width: 20
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31d0a11d8e945e747b23879ef35bcc31
-      internalID: -1941843148
+      spriteID: 2e55e2d0d929e33458cc23dfa4006ece
+      internalID: 1751236076
       vertices: []
       indices: 
       edges: []
@@ -246,13 +141,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      1_0: -1330981648
-      1_1: 1605751823
-      1_2: -664147467
-      1_3: 1667709033
-      1_4: 1975144857
-      1_5: 1962195456
-      1_6: -1941843148
+      Arrows_0: 74589264
+      Arrows_1: 1962643876
+      Arrows_10: 1751236076
+      Arrows_11: -1001301049
+      Arrows_2: 978138037
+      Arrows_3: -1531511245
+      Arrows_4: -1775214243
+      Arrows_5: -547819997
+      Arrows_6: -583072496
+      Arrows_7: 1756305580
+      Arrows_8: 722669979
+      Arrows_9: -1313279392
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

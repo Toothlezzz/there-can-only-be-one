@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    //References
-    Animator am;
-    PlayerMovement pm;
-    SpriteRenderer sr;
+    // References
+    private Animator am;
+    private PlayerMovement pm;
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +48,16 @@ public class PlayerAnimator : MonoBehaviour
         else if (pm.moveDir.x > 0)
         {
             sr.flipX = false;
+        }
+
+        // Handle Attack Animation
+        if (Input.GetKeyDown(KeyCode.Mouse0)) // Using left mouse button as attack input
+        {
+            am.SetBool("Attack", true);
+        }
+        else if (Input.GetKeyUp(KeyCode.Mouse0)) // Reset attack when button is released
+        {
+            am.SetBool("Attack", false);
         }
     }
 }
