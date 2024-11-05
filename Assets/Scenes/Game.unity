@@ -5229,7 +5229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3daf6ae1e54217a4da80fbfff3094352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  enemyData: {fileID: 11400000, guid: 1ac453e372ba9564cbbc58ada792bceb, type: 2}
 --- !u!61 &405711600
 BoxCollider2D:
   m_ObjectHideFlags: 0
