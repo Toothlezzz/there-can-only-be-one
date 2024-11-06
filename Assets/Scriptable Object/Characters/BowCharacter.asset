@@ -17,3 +17,6 @@ MonoBehaviour:
   recovery: 0
   might: 0
   projectileSpeed: 0
+  maxSpeed: 4
+  accelaration: 4
+  decelaration: 4
