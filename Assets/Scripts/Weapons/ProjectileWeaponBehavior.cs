@@ -14,6 +14,8 @@ public class ProjectileWeaponBehavior : MonoBehaviour
     protected float currentCooldownDuration;
     protected int currentPierce;
 
+    private HashSet<GameObject> hitEnemies = new HashSet<GameObject>(); // Set to track hit enemies
+
     void Awake()
     {
         currentDamage = weaponData.Damage;
@@ -21,7 +23,7 @@ public class ProjectileWeaponBehavior : MonoBehaviour
         currentCooldownDuration = weaponData.CooldownDuration;
         currentPierce = weaponData.Pierce;
     }
-    // Start is called before the first frame update
+
     protected virtual void Start()
     {
         Destroy(gameObject, destroyAfterSeconds);
@@ -31,15 +33,31 @@ public class ProjectileWeaponBehavior : MonoBehaviour
     {
         direction = dir;
     }
+
     protected virtual void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Enemy"))
         {
-            EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage);
-            ReducePierce();
+            GameObject enemyObject = col.gameObject;
+
+            // Check if the enemy has already been hit
+            if (!hitEnemies.Contains(enemyObject))
+            {
+                hitEnemies.Add(enemyObject); // Add to the set to avoid hitting the same enemy again
+
+                // Apply damage to the enemy
+                EnemyStats enemy = col.GetComponent<EnemyStats>();
+                if (enemy != null)
+                {
+                    enemy.TakeDamage(currentDamage);
+                }
+
+                // Reduce pierce and check if the projectile should be destroyed
+                ReducePierce();
+            }
         }
     }
+
     void ReducePierce()
     {
         currentPierce--;
