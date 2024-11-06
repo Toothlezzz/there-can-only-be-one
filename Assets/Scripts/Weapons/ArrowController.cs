@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class ArrowController : WeaponController
 {
-    // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
     }
 
-    // Update is called once per frame
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedKnife = Instantiate(prefab);
-        spawnedKnife.transform.position = transform.position;
+
+        // Instantiate the arrow
+        GameObject spawnedArrow = Instantiate(prefab);
+        spawnedArrow.transform.position = transform.position;
+
+        // Calculate the direction from the player to the mouse position
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePosition - transform.position).normalized;
+        direction.z = 0; // Ensure the z value is 0 for 2D movement
+
+        // Pass the direction to the ArrowBehavior script
+        spawnedArrow.GetComponent<ArrowBehavior>().DirectionChecker(direction);
     }
 }
