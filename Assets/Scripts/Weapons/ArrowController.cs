@@ -14,7 +14,7 @@ public class ArrowController : WeaponController
         base.Attack();
 
         // Instantiate the arrow
-        GameObject spawnedArrow = Instantiate(prefab);
+        GameObject spawnedArrow = Instantiate(weaponData.Prefab);
         spawnedArrow.transform.position = transform.position;
 
         // Calculate the direction from the player to the mouse position
