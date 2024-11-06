@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ArrowBehavior : ProjectileWeaponBehavior
 {
-    ArrowController ac;
+    
+
 
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        ac = FindObjectOfType<ArrowController>();
-
         // Rotate the arrow sprite to face the direction
         RotateArrow();
     }
@@ -20,7 +19,7 @@ public class ArrowBehavior : ProjectileWeaponBehavior
     void Update()
     {
         // Move the arrow in the given direction
-        transform.position += direction * ac.speed * Time.deltaTime;
+        transform.position += direction * weaponData.Speed * Time.deltaTime;
     }
 
     // Method to rotate the arrow sprite
