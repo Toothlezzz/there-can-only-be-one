@@ -8,6 +8,7 @@ public class PlayerAnimator : MonoBehaviour
     private Animator am;
     private PlayerMovement pm;
     private SpriteRenderer sr;
+    public CharacterScriptableObject characterData;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class PlayerAnimator : MonoBehaviour
         }
 
         // Determine if the player is running or just walking
-        if (pm.currentVelocity.magnitude > pm.maxSpeed * 0.6f) // Adjust the threshold as needed
+        if (pm.currentVelocity.magnitude > characterData.MaxSpeed * 0.6f) // Adjust the threshold as needed
         {
             am.SetBool("Run", true);
         }

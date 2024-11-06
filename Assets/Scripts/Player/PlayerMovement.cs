@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float maxSpeed = 5f;          // Maximum speed the player can reach
-    public float acceleration = 2f;      // Rate of acceleration
-    public float deceleration = 4f;      // Rate of deceleration
 
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
+    public CharacterScriptableObject characterData;
+
     [HideInInspector]
     public Vector2 moveDir;
     public Vector2 currentVelocity = Vector2.zero; // Current velocity of the player
@@ -53,16 +52,16 @@ public class PlayerMovement : MonoBehaviour
             if (Vector2.Dot(currentVelocity.normalized, moveDir) < 0.99f)
             {
                 // If the input direction is different, snap to the new direction
-                currentVelocity = moveDir * Mathf.Min(currentVelocity.magnitude, maxSpeed);
+                currentVelocity = moveDir * Mathf.Min(currentVelocity.magnitude, characterData.MaxSpeed);
             }
 
             // Smoothly increase velocity towards the desired direction
-            currentVelocity = Vector2.MoveTowards(currentVelocity, moveDir * maxSpeed, acceleration * Time.fixedDeltaTime);
+            currentVelocity = Vector2.MoveTowards(currentVelocity, moveDir * characterData.MaxSpeed, characterData.Accelaration * Time.fixedDeltaTime);
         }
         else // If there is no input, decelerate
         {
             // Smoothly decrease velocity to zero
-            currentVelocity = Vector2.MoveTowards(currentVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
+            currentVelocity = Vector2.MoveTowards(currentVelocity, Vector2.zero, characterData.Decelaration * Time.fixedDeltaTime);
         }
 
         // Set the rigidbody velocity
